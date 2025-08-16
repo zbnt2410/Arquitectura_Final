@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizador de Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Optimizador de Portafolio de Inversiones</h1>
+        
+        <div class="input-group">
+            <label for="capacidad">Presupuesto total disponible (USD):</label>
+            <input type="number" id="capacidad" placeholder="Ej: 10000" min="1">
+        </div>
+
+        <h3>Proyectos/Inversiones</h3>
+        <div id="proyectos">
+            <div class="proyecto">
+                <input type="text" placeholder="Nombre (ej: Fondo_A)" class="nombre">
+                <input type="number" placeholder="Costo (ej: 2000)" class="peso" min="1">
+                <input type="number" placeholder="Ganancia (ej: 1500)" class="ganancia" min="1">
+                <button onclick="this.parentElement.remove()">🗑️</button>
+            </div>
+        </div>
+
+        <button onclick="agregarProyecto()"> Añadir proyecto</button>
+        <button onclick="optimizar()"> Optimizar portafolio</button>
+
+        <div id="resultados"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
